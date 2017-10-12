@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>607369707307-i1om5psqfue9jfdgai4gv7m4u5jmrrvu.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.607369707307-i1om5psqfue9jfdgai4gv7m4u5jmrrvu</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDTTDeDkAbHziPjSrSpUCltHa9uviAXL9k</string>
+	<key>GCM_SENDER_ID</key>
+	<string>607369707307</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.meetup.tableview.RxCocoaExamples</string>
+	<key>PROJECT_ID</key>
+	<string>swift-meetup</string>
+	<key>STORAGE_BUCKET</key>
+	<string>swift-meetup.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:607369707307:ios:ff94133892fc6556</string>
+	<key>DATABASE_URL</key>
+	<string>https://swift-meetup.firebaseio.com</string>
+</dict>
+</plist>
