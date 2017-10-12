@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ajp-rw-BoQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -56,6 +56,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-218" y="122"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="cdo-dz-vKF">
+            <objects>
+                <viewController id="Ajp-rw-BoQ" customClass="SearchViewController" customModule="RxCocoaExamples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wc5-Gv-ca2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lS0-Zk-5fh">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Tuy-2o-bGV"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hEi-Yl-OCY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellIdentifier" id="7mi-rQ-bQq">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7mi-rQ-bQq" id="a9P-d2-O3b">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kYQ-cp-ut7">
+                                <rect key="frame" x="157" y="303" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="ODs-h7-9qe"/>
+                                    <constraint firstAttribute="height" constant="60" id="yqh-vx-u9w"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lS0-Zk-5fh" firstAttribute="trailing" secondItem="755-BR-XeR" secondAttribute="trailing" id="9VQ-wu-hLT"/>
+                            <constraint firstItem="lS0-Zk-5fh" firstAttribute="leading" secondItem="755-BR-XeR" secondAttribute="leading" id="Hw8-V5-bwW"/>
+                            <constraint firstItem="kYQ-cp-ut7" firstAttribute="centerX" secondItem="wc5-Gv-ca2" secondAttribute="centerX" id="bde-r2-kjV"/>
+                            <constraint firstItem="kYQ-cp-ut7" firstAttribute="centerY" secondItem="wc5-Gv-ca2" secondAttribute="centerY" id="dh0-6k-6tT"/>
+                            <constraint firstItem="755-BR-XeR" firstAttribute="trailing" secondItem="hEi-Yl-OCY" secondAttribute="trailing" id="dsL-vB-dNV"/>
+                            <constraint firstItem="hEi-Yl-OCY" firstAttribute="leading" secondItem="755-BR-XeR" secondAttribute="leading" id="qTa-PF-hsi"/>
+                            <constraint firstItem="lS0-Zk-5fh" firstAttribute="top" secondItem="755-BR-XeR" secondAttribute="top" id="tuR-BB-cku"/>
+                            <constraint firstItem="755-BR-XeR" firstAttribute="bottom" secondItem="hEi-Yl-OCY" secondAttribute="bottom" id="y0X-PH-UA9"/>
+                            <constraint firstItem="hEi-Yl-OCY" firstAttribute="top" secondItem="lS0-Zk-5fh" secondAttribute="bottom" id="zED-K2-Zh1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="755-BR-XeR"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="kYQ-cp-ut7" id="C2D-jG-bWP"/>
+                        <outlet property="searchBar" destination="lS0-Zk-5fh" id="d6o-m5-gEd"/>
+                        <outlet property="tableView" destination="hEi-Yl-OCY" id="V2B-JE-6uW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UeU-QV-axX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="122"/>
         </scene>
     </scenes>
 </document>
